@@ -8,11 +8,14 @@ Output:
  [1,2,1],
  [2,1,1]]
 
-Time Compelxity of Solution: 
-Internal nodes: O[n] to search through each node + O[1] to append item to array
-Leaf nodes: O[n] to copy the array to result* (n+1)/2 leaf nodes
+Time Complexity of Solution: O(n*n!)
+Number fo Nodes is NOT the size of the array. You would need to go through each permutation at least once so n! nodes
+Internal nodes: O[n!] to search through each node + O[1] to append item to array
+Leaf nodes: O[n] to copy the array to result* (n!+1)/2 leaf nodes
 
-
+Space Complexity: O(n)-AUX, O(n*n!)-OUTPUT
+Aux Space: O(n) to hold the counter (worst case) + O(n) to hold the currOutput (we just and and pop these)
+Output Space: we will have n! output arrays of size n each
 '''
 
 
